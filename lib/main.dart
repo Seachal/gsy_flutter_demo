@@ -87,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           itemBuilder: (context, index) {
             return new InkWell(
               onTap: () {
+//              sca:点击事件
                 Navigator.of(context).pushNamed(routeLists[index]);
               },
               child: new Card(
@@ -161,9 +162,13 @@ Map<String, WidgetBuilder> routers = {
   "widget/controller": (context) {
     return new ControllerDemoPage();
   },
+// 不能这样写的原因是， the element type" Controllerdemopage'can't be assigned to the map value type Widget Function (Buildcontext
+/*   "widget/controller": new ControllerDemoPage();
+  ,*/
   "widget/clip": (context) {
     return new ClipDemoPage();
   },
+//
   "widget/scroll": (context) {
     return new ScrollListenerDemoPage();
   },

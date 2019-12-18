@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 /// 比如 ListView  的 ScrollController
 /// 一般想对控件做 OOXX 的事情，先找个 Controller 就对了。
 class ControllerDemoPage extends StatelessWidget {
+//  sca: 设置一个初始值，  类似于 hint，
   final TextEditingController controller = new TextEditingController(text: "init Text");
 
   @override
@@ -24,6 +25,7 @@ class ControllerDemoPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+//     sca:   被点击时，  使用新的问题。
         onPressed: () {
           print("current Text ${controller.text}");
           controller.text = "Changed By FloatingActionButton";

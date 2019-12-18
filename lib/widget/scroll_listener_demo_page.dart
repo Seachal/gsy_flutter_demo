@@ -21,6 +21,7 @@ class _ScrollListenerDemoPageState extends State<ScrollListenerDemoPage> {
     _scrollController.addListener(() {
       setState(() {
         offset = _scrollController.offset;
+//        像素位置值 == maxScrollExtent,作为判断依据，是否滑动到了底部
         isEnd = _scrollController.position.pixels ==
             _scrollController.position.maxScrollExtent;
       });
